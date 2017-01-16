@@ -1,0 +1,59 @@
+// Platzieren Sie Ihre Einstellungen in dieser Datei, um die Standardeinstellungen zu überschreiben.
+{
+    "workbench.editor.showTabs": false,
+
+    "files.encoding": "windows1252",
+    "files.trimTrailingWhitespace": true,
+    //"files.autoSave": "afterDelay",
+    "files.associations": {
+        "*.sql": "plsql",
+        "*.pkg": "plsql",
+        "*.pks": "plsql",
+        "*.trg": "plsql",
+        "*.tps": "plsql",
+        "*.tpb": "plsql"
+    },
+
+    "window.openFilesInNewWindow": false,
+
+    "editor.renderIndentGuides": true,
+    "editor.rulers": [
+        80, 120
+    ],
+
+    "code-runner.runInTerminal": true,
+    "code-runner.fileDirectoryAsCwd": true,
+    "code-runner.executorMap": {
+        "javascript": "node",
+        "java": "cd $dir && javac $fileName && java $fileNameWithoutExt",
+        "c": "gcc $fullFileName && ./a.out",
+        "cpp": "g++ $fullFileName && ./a.out",
+        "php": "php",
+        "python": "python",
+        "perl": "perl",
+        "ruby": "ruby",
+        "go": "go run",
+        "lua": "lua",
+        "groovy": "groovy",
+        "powershell": "powershell -ExecutionPolicy ByPass -File",
+        "bat": "",
+        "shellscript": "bash",
+        "fsharp": "fsi",
+        "csharp": "scriptcs",
+        "vbscript": "cscript //Nologo",
+        "typescript": "ts-node",
+        "coffeescript": "coffee",
+        "scala": "scala",
+        "swift": "swift",
+        "julia": "julia",
+        "crystal": "crystal",
+        "ocaml": "ocaml",
+        "r": "Rscript",
+        "plsql": "cd $dir && sqlrun $fileName"
+    },
+
+    "projectManager.openInNewWindow": false
+
+,
+"window.zoomLevel": -1
+}

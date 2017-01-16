@@ -1,0 +1,13 @@
+code --install_extension steve8708.Align
+code --install_extension luggage66.AWK
+code --install_extension alefragnani.Bookmarks
+code --install_extension wmaurer.change-case
+code --install_extension formulahendry.code-runner
+code --install_extension nemesv.copy-file-name
+code --install_extension Compulim.compulim-vscode-dictionary
+code --install_extension lukehoban.Go
+code --install_extension xyz.plsql-language
+code --install_extension alefragnani.project-manager
+code --install_extension cdsama.tortoise-svn-for-vscode
+code --install_extension emmanuelbeziat.vscode-great-icons
+code --install_extension DotJoshJohnson.xml
