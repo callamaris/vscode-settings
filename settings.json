@@ -1,6 +1,6 @@
 // Platzieren Sie Ihre Einstellungen in dieser Datei, um die Standardeinstellungen zu überschreiben.
 {
-    "workbench.editor.showTabs": false,
+    "workbench.editor.showTabs": true,
 
     "files.encoding": "windows1252",
     "files.trimTrailingWhitespace": true,
@@ -15,13 +15,16 @@
     },
 
     "window.openFilesInNewWindow": false,
+    "window.zoomLevel": -1,
 
+    "editor.tabSize": 2,
+    "editor.wrappingColumn": -1,
     "editor.renderIndentGuides": true,
+    "editor.autoClosingBrackets": false,
     "editor.rulers": [
         80, 120
     ],
 
-    "code-runner.runInTerminal": true,
     "code-runner.fileDirectoryAsCwd": true,
     "code-runner.executorMap": {
         "javascript": "node",
@@ -49,11 +52,15 @@
         "crystal": "crystal",
         "ocaml": "ocaml",
         "r": "Rscript",
-        "plsql": "cd $dir && sqlrun $fileName"
+        "plsql": "echo exit | sqlplus -S /nolog @$fullFileName"
     },
 
-    "projectManager.openInNewWindow": false
+    "gitProjectManager.baseProjectsFolders": [
+        "%USERPROFILE%\\Documents\\projekte"
+    ],
 
-,
-"window.zoomLevel": -1
+    "bookmarks.useStickyBookmarks": true,
+    "bookmarks.navigateThroughAllFiles": true,
+    "bookmarks.saveBookmarksBetweenSessions": true
+
 }
