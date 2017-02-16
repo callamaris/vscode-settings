@@ -1,18 +1,17 @@
-code --install-extension adamhartford.vscode-base64
-code --install-extension alefragnani.Bookmarks
-code --install-extension bibhasdn.git-easy
-code --install-extension dbankier.vscode-instant-markdown
-code --install-extension donjayamanne.githistory
-code --install-extension DotJoshJohnson.xml
-code --install-extension emmanuelbeziat.vscode-great-icons
-code --install-extension felipecaputo.git-project-manager
-code --install-extension formulahendry.code-runner
-code --install-extension GrapeCity.gc-excelviewer
-code --install-extension luggage66.AWK
-code --install-extension lukehoban.Go
-code --install-extension mycelo.oracle-plsql
-code --install-extension nemesv.copy-file-name
-code --install-extension pprice.better-merge
-code --install-extension steve8708.Align
-code --install-extension wmaurer.change-case
-code --install-extension xyz.plsql-language
+call code --install-extension adamhartford.vscode-base64
+call code --install-extension alefragnani.Bookmarks
+call code --install-extension bibhasdn.git-easy
+call code --install-extension dbankier.vscode-instant-markdown
+call code --install-extension donjayamanne.githistory
+call code --install-extension DotJoshJohnson.xml
+call code --install-extension emmanuelbeziat.vscode-great-icons
+call code --install-extension felipecaputo.git-project-manager
+call code --install-extension formulahendry.code-runner
+call code --install-extension GrapeCity.gc-excelviewer
+call code --install-extension luggage66.AWK
+call code --install-extension lukehoban.Go
+call code --install-extension nemesv.copy-file-name
+call code --install-extension pprice.better-merge
+call code --install-extension steve8708.Align
+call code --install-extension wmaurer.change-case
+call code --install-extension xyz.plsql-language
