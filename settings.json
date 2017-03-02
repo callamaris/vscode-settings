@@ -1,10 +1,18 @@
 // Platzieren Sie Ihre Einstellungen in dieser Datei, um die Standardeinstellungen zu überschreiben.
 {
-    "workbench.editor.showTabs": true,
+    //Workbench
+    "workbench.editor.showTabs": false, //evtl. wieder raus nehmen
+    "workbench.editor.enablePreview": false, //nerviges automatisches Schließen von Dateien
+    "workbench.iconTheme": "vscode-great-icons",
 
+    //Zen Mode
+    "zenMode.fullScreen": true,
+    "zenMode.hideStatusBar": false,
+    "zenMode.hideTabs": true,
+
+    //Files
     "files.encoding": "windows1252",
     "files.trimTrailingWhitespace": true,
-    //"files.autoSave": "afterDelay",
     "files.associations": {
         "*.sql": "plsql",
         "*.pkg": "plsql",
@@ -14,19 +22,36 @@
         "*.tpb": "plsql"
     },
 
-    "window.openFilesInNewWindow": false,
+    //Window
+    "window.openFilesInNewWindow": "off", //fürs Öffnen von csv Dateien aus Batch-Script
     "window.zoomLevel": -1,
 
+    //Editor
     "editor.tabSize": 2,
-    "editor.wrappingColumn": -1,
+    "editor.minimap.enabled": true,
+    "editor.minimap.renderCharacters": true,
+    "editor.wordWrap": "off",
     "editor.renderIndentGuides": true,
-    "editor.autoClosingBrackets": false,
+    "editor.autoClosingBrackets": false, //Geht das auch per File Extension?
     "editor.rulers": [
         80, 120
     ],
 
+    //Explorer
+    "explorer.openEditors.dynamicHeight": false,
+    "explorer.openEditors.visible": 15,
+
+    //Code Runner (TODO)
     "code-runner.fileDirectoryAsCwd": true,
     "code-runner.executorMap": {
+        /*
+            $workspaceRoot: The path of the folder opened in VS Code
+            $dir: The directory of the code file being run
+            $dirWithoutTrailingSlash: The directory of the code file being run without a trailing slash
+            $fullFileName: The full name of the code file being run
+            $fileName: The base name of the code file being run, that is the file without the directory
+            $fileNameWithoutExt: The base name of the code file being run without its extension
+        */
         "javascript": "node",
         "java": "cd $dir && javac $fileName && java $fileNameWithoutExt",
         "c": "gcc $fullFileName && ./a.out",
@@ -55,12 +80,44 @@
         "plsql": "echo exit | sqlplus -S /nolog @$fullFileName"
     },
 
+    //Git Project Manager
     "gitProjectManager.baseProjectsFolders": [
         "%USERPROFILE%\\Documents\\projekte"
     ],
 
-    "bookmarks.useStickyBookmarks": true,
+    //Bookmarks
+    "bookmarks.useStickyBookmarks": true, //Text Einfügen über Bookmarks nervt sonst
     "bookmarks.navigateThroughAllFiles": true,
-    "bookmarks.saveBookmarksBetweenSessions": true
+    "bookmarks.saveBookmarksBetweenSessions": true,
 
-}
+    //Find Related Files
+    "findrelated.autoOpen": true, //???
+    "findrelated.applyRulesets": [
+        "PLSQL"
+    ],
+    "findrelated.rulesets": [
+        {
+            "name": "PLSQL",
+            "rules": [
+
+                { //-------Package Body/Spec ------
+                    "pattern": "(.*)\\.pks$",
+                    "locators": ["$1.pkb"]
+                },
+                {
+                    "pattern": "(.*)\\.pkb$",
+                    "locators": ["$1.pks"]
+                },
+                //-------Type Body/Spec ------------
+                {
+                    "pattern": "(.*)\\.tps$",
+                    "locators": ["$1.tpb"]
+                },
+                {
+                    "pattern": "(.*)\\.tpb$",
+                    "locators": ["$1.tps"]
+                }
+            ]
+        }
+    ]
+  }
