@@ -4,6 +4,7 @@
     "workbench.editor.showTabs": false, //evtl. wieder raus nehmen
     "workbench.editor.enablePreview": false, //nerviges automatisches Schließen von Dateien
     "workbench.iconTheme": "vscode-great-icons",
+    "workbench.colorTheme": "Visual Studio Dark",
 
     //Zen Mode
     "zenMode.fullScreen": true,
@@ -13,6 +14,7 @@
     //Files
     "files.encoding": "windows1252",
     "files.trimTrailingWhitespace": true,
+    "files.autoGuessEncoding": true,
     "files.associations": {
         "*.sql": "plsql",
         "*.pkg": "plsql",
@@ -22,6 +24,9 @@
         "*.tpb": "plsql"
     },
 
+    //extensions
+    "extensions.ignoreRecommendations": true,
+
     //Window
     "window.openFilesInNewWindow": "off", //fürs Öffnen von csv Dateien aus Batch-Script
     "window.zoomLevel": 0,
@@ -30,13 +35,19 @@
     "editor.tabSize": 2,
     "editor.minimap.enabled": true,
     "editor.minimap.renderCharacters": true,
+    "editor.minimap.showSlider": "always",
     "editor.wordWrap": "off",
     "editor.renderIndentGuides": true,
     "editor.cursorBlinking": "solid",
+    "editor.renderWhitespace": "all",
+    "editor.renderControlCharacters": true,
     "editor.autoClosingBrackets": false, //Geht das auch per File Extension?
     "editor.rulers": [
         80, 120
     ],
+
+    //terminal
+    "terminal.integrated.shell.windows": "C:\\WINDOWS\\Sysnative\\WindowsPowerShell\\v1.0\\powershell.exe",
 
     //csv
     "csv-preview.quoteMark": "",
@@ -91,7 +102,8 @@
 
     //Git Project Manager
     "gitProjectManager.baseProjectsFolders": [
-        "%USERPROFILE%\\Documents\\projekte"
+        "%USERPROFILE%\\Documents\\projekte",
+        "%APPDATA%\\Code\\User"
     ],
 
     //Bookmarks
@@ -131,12 +143,45 @@
     ],
 
     //vim
+    /*
+      <leader><leader> command pallet
+      f (files)
+       - f file
+       - e editors
+       - t tree
+       - s save
+       - S save all
+       - c close
+       - C close all
+      g (git)
+        status
+        diff
+        add
+        commit
+        log
+      tasks
+      window
+
+    */
     "vim.useSystemClipboard": true,
     "vim.useCtrlKeys": true,
+    "vim.leader": "<space>",
     "vim.insertModeKeyBindings": [
         {
             "before": ["j","j"],
             "after": ["<Esc>"]
+        }
+    ],
+    "vim.otherModesKeyBindings": [
+        {
+            "before": ["<leader>", "<leader>"],
+            "after": [],
+            "commands": [
+                {
+                    "command": "workbench.action.showCommands",
+                    "args": []
+                }
+            ]
         }
     ],
     "vim.otherModesKeyBindingsNonRecursive": [
@@ -145,9 +190,5 @@
             "after": ["n", "z", "z"]
         }
     ],
-    "workbench.colorTheme": "Visual Studio Dark",
-    "terminal.integrated.shell.windows": "C:\\WINDOWS\\Sysnative\\WindowsPowerShell\\v1.0\\powershell.exe",
-    "editor.renderWhitespace": "all",
-    "vim.disableAnnoyingNeovimMessage": true,
-    "vim.disableAnnoyingGcMessage": true
+    "vim.disableAnnoyingNeovimMessage": true
 }
