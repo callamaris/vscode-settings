@@ -24,7 +24,7 @@
 
     //Window
     "window.openFilesInNewWindow": "off", //fürs Öffnen von csv Dateien aus Batch-Script
-    "window.zoomLevel": -1,
+    "window.zoomLevel": 0,
 
     //Editor
     "editor.tabSize": 2,
@@ -32,10 +32,19 @@
     "editor.minimap.renderCharacters": true,
     "editor.wordWrap": "off",
     "editor.renderIndentGuides": true,
+    "editor.cursorBlinking": "solid",
     "editor.autoClosingBrackets": false, //Geht das auch per File Extension?
     "editor.rulers": [
         80, 120
     ],
+
+    //csv
+    "csv-preview.quoteMark": "",
+    "csv-preview.separator": "\t",
+    "csv-preview.theme": "cleanlight",
+
+    //diff
+    "diffEditor.renderSideBySide": true,
 
     //Explorer
     "explorer.openEditors.dynamicHeight": false,
@@ -86,9 +95,9 @@
     ],
 
     //Bookmarks
-    "bookmarks.useStickyBookmarks": true, //Text Einfügen über Bookmarks nervt sonst
     "bookmarks.navigateThroughAllFiles": true,
-    "bookmarks.saveBookmarksBetweenSessions": true,
+    "bookmarks.saveBookmarksInProject": true,
+    "numberedBookmarks.saveBookmarksInProject": true,
 
     //Find Related Files
     "findrelated.autoOpen": true, //???
@@ -119,5 +128,26 @@
                 }
             ]
         }
-    ]
-  }
+    ],
+
+    //vim
+    "vim.useSystemClipboard": true,
+    "vim.useCtrlKeys": true,
+    "vim.insertModeKeyBindings": [
+        {
+            "before": ["j","j"],
+            "after": ["<Esc>"]
+        }
+    ],
+    "vim.otherModesKeyBindingsNonRecursive": [
+        {
+            "before": ["n"],
+            "after": ["n", "z", "z"]
+        }
+    ],
+    "workbench.colorTheme": "Visual Studio Dark",
+    "terminal.integrated.shell.windows": "C:\\WINDOWS\\Sysnative\\WindowsPowerShell\\v1.0\\powershell.exe",
+    "editor.renderWhitespace": "all",
+    "vim.disableAnnoyingNeovimMessage": true,
+    "vim.disableAnnoyingGcMessage": true
+}

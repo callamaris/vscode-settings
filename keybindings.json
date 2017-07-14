@@ -1,0 +1,24 @@
+// Platzieren Sie Ihre Tastenzuordnungen in dieser Datei, um die Standardwerte zu überschreiben.
+[
+  {"key": "ctrl+shift+alt+l", "command": "bookmarks.toggle"},
+  {
+      "key": "j",
+      "command": "list.focusDown",
+      "when": "listFocus"
+  },
+  {
+      "key": "k",
+      "command": "list.focusUp",
+      "when": "listFocus"
+  },
+  {
+      "key": "enter",
+      "command": "list.select",
+      "when": "explorerViewletVisible && filesExplorerFocus"
+  },
+  {
+      "key": "o",
+      "command": "list.toggleExpand",
+      "when": "listFocus"
+  }
+]
