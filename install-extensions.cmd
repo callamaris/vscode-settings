@@ -1,3 +1,4 @@
+FOR /D %%p IN ("%USERPROFILE%\.vscode\extensions\*.*") DO rmdir "%%p" /s /q
 call code --install-extension adamhartford.vscode-base64
 call code --install-extension alefragnani.Bookmarks
 call code --install-extension alefragnani.numbered-bookmarks

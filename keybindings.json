@@ -20,5 +20,30 @@
       "key": "o",
       "command": "list.toggleExpand",
       "when": "listFocus"
+  },
+  {
+      "key": "y",
+      "command": "filesExplorer.copy",
+      "when": "explorerViewletVisible && filesExplorerFocus"
+  },
+  {
+      "key": "p",
+      "command": "filesExplorer.paste",
+      "when": "explorerViewletVisible && filesExplorerFocus"
+  },
+  {
+      "key": "d",
+      "command": "moveFileToTrash",
+      "when": "explorerViewletVisible && filesExplorerFocus"
+  },
+  {
+      "key": "i",
+      "command": "explorer.newFile",
+      "when": "explorerViewletVisible && filesExplorerFocus"
+//   },
+//   {
+//       "key": "space",
+//       "command": "workbench.action.showCommands",
+//       "when": "explorerViewletVisible && filesExplorerFocus"
   }
 ]

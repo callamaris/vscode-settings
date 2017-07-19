@@ -33,6 +33,7 @@
 
     //Editor
     "editor.tabSize": 2,
+    "editor.useTabStops": true,
     "editor.minimap.enabled": true,
     "editor.minimap.renderCharacters": true,
     "editor.minimap.showSlider": "always",
@@ -173,16 +174,35 @@
         }
     ],
     "vim.otherModesKeyBindings": [
-        {
-            "before": ["<leader>", "<leader>"],
-            "after": [],
-            "commands": [
-                {
-                    "command": "workbench.action.showCommands",
-                    "args": []
-                }
-            ]
-        }
+        {"before": ["<leader>", "<leader>"],"commands": [{"command": "workbench.action.showCommands","args": []}]},
+        //(f)iles
+        {"before": ["<leader>", "f", "f"],"commands": [{"command": "workbench.action.quickOpen"}]},
+        {"before": ["<leader>", "f", "n"],"commands": [{"command": "workbench.action.files.newUntitledFile"}]},
+        {"before": ["<leader>", "f", "s"],"commands": [{"command": "workbench.action.files.save"}]},
+        {"before": ["<leader>", "f", "S"],"commands": [{"command": "workbench.action.files.saveAll"}]},
+        {"before": ["<leader>", "f", "x"],"commands": [{"command": "workbench.action.closeActiveEditor"}]},
+        {"before": ["<leader>", "f", "X"],"commands": [{"command": "workbench.action.closeAllEditors"}]},
+        {"before": ["<leader>", "f", "e"],"commands": [{"command": "workbench.files.action.focusFilesExplorer"}]},
+        {"before": ["<leader>", "f", "p"],"commands": [{"command": "gitProjectManager.openProject"}]}
+        //(g)it
+        //(m)arks
+            // - textmarker.clearAllHighlight
+            // - textmarker.highlight
+            // - textmarker.highlightUsingRegex
+            // - textmarker.markText
+            // - textmarker.toggleCaseSensitivity
+            // - textmarker.toggleHighlight
+            // - textmarker.toggleModeForCaseSensitivity
+            // - textmarker.toggleModeForWholeMatch
+            // - textmarker.toggleWholeMatch
+            // - textmarker.unhighlight
+            // - textmarker.updateHighlight
+            // - bookmarks.clear
+            // - bookmarks.clearFromAllFiles
+            // - bookmarks.list
+            // - bookmarks.listFromAllFiles
+            // - bookmarks.selectLines
+        //(e)dit
     ],
     "vim.otherModesKeyBindingsNonRecursive": [
         {
