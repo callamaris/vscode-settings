@@ -42,17 +42,18 @@
     "editor.cursorBlinking": "solid",
     "editor.renderWhitespace": "all",
     "editor.renderControlCharacters": true,
+    "editor.lineNumbers": "on",
     "editor.autoClosingBrackets": false, //Geht das auch per File Extension?
     "editor.rulers": [
         80, 120
     ],
 
     //terminal
-    "terminal.integrated.shell.windows": "C:\\WINDOWS\\Sysnative\\WindowsPowerShell\\v1.0\\powershell.exe",
+    "terminal.integrated.shell.windows": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
 
     //csv
-    "csv-preview.quoteMark": "",
-    "csv-preview.separator": "\t",
+    "csv-preview.quoteMark": "\"",
+    "csv-preview.separator": ",",
     "csv-preview.theme": "cleanlight",
 
     //diff
@@ -141,74 +142,5 @@
                 }
             ]
         }
-    ],
-
-    //vim
-    /*
-      <leader><leader> command pallet
-      f (files)
-       - f file
-       - e editors
-       - t tree
-       - s save
-       - S save all
-       - c close
-       - C close all
-      g (git)
-        status
-        diff
-        add
-        commit
-        log
-      tasks
-      window
-
-    */
-    "vim.useSystemClipboard": true,
-    "vim.useCtrlKeys": true,
-    "vim.leader": "<space>",
-    "vim.insertModeKeyBindings": [
-        {
-            "before": ["j","j"],
-            "after": ["<Esc>"]
-        }
-    ],
-    "vim.otherModesKeyBindings": [
-        {"before": ["<leader>", "<leader>"],"commands": [{"command": "workbench.action.showCommands","args": []}]},
-        //(f)iles
-        {"before": ["<leader>", "f", "f"],"commands": [{"command": "workbench.action.quickOpen"}]},
-        {"before": ["<leader>", "f", "n"],"commands": [{"command": "workbench.action.files.newUntitledFile"}]},
-        {"before": ["<leader>", "f", "s"],"commands": [{"command": "workbench.action.files.save"}]},
-        {"before": ["<leader>", "f", "S"],"commands": [{"command": "workbench.action.files.saveAll"}]},
-        {"before": ["<leader>", "f", "x"],"commands": [{"command": "workbench.action.closeActiveEditor"}]},
-        {"before": ["<leader>", "f", "X"],"commands": [{"command": "workbench.action.closeAllEditors"}]},
-        {"before": ["<leader>", "f", "e"],"commands": [{"command": "workbench.files.action.focusFilesExplorer"}]},
-        {"before": ["<leader>", "f", "p"],"commands": [{"command": "gitProjectManager.openProject"}]}
-        //(g)it
-        //(m)arks
-            // - textmarker.clearAllHighlight
-            // - textmarker.highlight
-            // - textmarker.highlightUsingRegex
-            // - textmarker.markText
-            // - textmarker.toggleCaseSensitivity
-            // - textmarker.toggleHighlight
-            // - textmarker.toggleModeForCaseSensitivity
-            // - textmarker.toggleModeForWholeMatch
-            // - textmarker.toggleWholeMatch
-            // - textmarker.unhighlight
-            // - textmarker.updateHighlight
-            // - bookmarks.clear
-            // - bookmarks.clearFromAllFiles
-            // - bookmarks.list
-            // - bookmarks.listFromAllFiles
-            // - bookmarks.selectLines
-        //(e)dit
-    ],
-    "vim.otherModesKeyBindingsNonRecursive": [
-        {
-            "before": ["n"],
-            "after": ["n", "z", "z"]
-        }
-    ],
-    "vim.disableAnnoyingNeovimMessage": true
+    ]
 }

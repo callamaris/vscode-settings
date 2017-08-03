@@ -14,7 +14,6 @@ call code --install-extension DotJoshJohnson.xml
 call code --install-extension eamodio.find-related
 call code --install-extension eamodio.gitlens
 call code --install-extension emmanuelbeziat.vscode-great-icons
-call code --install-extension extr0py.vscode-relative-line-numbers
 call code --install-extension felipecaputo.git-project-manager
 call code --install-extension formulahendry.code-runner
 call code --install-extension gerane.Theme-Github
@@ -27,7 +26,6 @@ call code --install-extension lukehoban.Go
 call code --install-extension nemesv.copy-file-name
 call code --install-extension ryu1kn.text-marker
 call code --install-extension steve8708.Align
-call code --install-extension vscodevim.vim
 call code --install-extension wmaurer.change-case
 call code --install-extension xyz.plsql-language
 call code --install-extension ziyasal.vscode-open-in-github
