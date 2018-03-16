@@ -1,6 +1,13 @@
 // Platzieren Sie Ihre Tastenzuordnungen in dieser Datei, um die Standardwerte zu überschreiben.
 [
-//  {"key": "ctrl+shift+alt+l", "command": "bookmarks.toggle"},
+
+  {
+    "key": "shift+enter",
+    "command": "extension.jumpy-word",
+    "when": "editorTextFocus"
+  }
+
+  //  {"key": "ctrl+shift+alt+l", "command": "bookmarks.toggle"},
 //  {
 //      "key": "j",
 //      "command": "list.focusDown",

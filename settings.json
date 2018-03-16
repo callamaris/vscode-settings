@@ -1,15 +1,16 @@
 // Platzieren Sie Ihre Einstellungen in dieser Datei, um die Standardeinstellungen zu überschreiben.
 {
     //Workbench
-    "workbench.editor.showTabs": false, //evtl. wieder raus nehmen
+    "workbench.editor.showTabs": false,
     "workbench.editor.enablePreview": false, //nerviges automatisches Schließen von Dateien
     "workbench.iconTheme": "vscode-great-icons",
     "workbench.colorTheme": "Visual Studio Dark",
 
+
     //Zen Mode
     "zenMode.fullScreen": true,
     "zenMode.hideStatusBar": false,
-    "zenMode.hideTabs": true,
+    "zenMode.hideTabs": false,
 
     //Files
     "files.encoding": "windows1252",
@@ -35,6 +36,7 @@
     "editor.tabSize": 2,
     "editor.useTabStops": true,
     "editor.minimap.enabled": true,
+    "editor.stablePeek": true,
     "editor.minimap.renderCharacters": true,
     "editor.minimap.showSlider": "always",
     "editor.wordWrap": "off",
@@ -45,23 +47,23 @@
     "editor.lineNumbers": "on",
     "editor.autoClosingBrackets": false, //Geht das auch per File Extension?
     "editor.rulers": [
-        80, 120
+        40, 80, 100, 120
     ],
 
     //terminal
     "terminal.integrated.shell.windows": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
 
     //csv
-    "csv-preview.quoteMark": "\"",
-    "csv-preview.separator": ",",
+    //"csv-preview.quoteMark": "",
+    "csv-preview.separator": ";",
     "csv-preview.theme": "cleanlight",
 
     //diff
     "diffEditor.renderSideBySide": true,
 
     //Explorer
-    "explorer.openEditors.dynamicHeight": false,
-    "explorer.openEditors.visible": 15,
+    "explorer.openEditors.dynamicHeight": true,
+    "explorer.openEditors.visible": 100,
 
     //Code Runner (TODO)
     "code-runner.fileDirectoryAsCwd": true,
@@ -142,5 +144,17 @@
                 }
             ]
         }
-    ]
+    ],
+    "terminal.external.windowsExec": "C:\\Windows\\System32\\cmd.exe",
+    "gitlens.advanced.messages": {
+        "suppressCommitHasNoPreviousCommitWarning": false,
+        "suppressCommitNotFoundWarning": false,
+        "suppressFileNotUnderSourceControlWarning": true,
+        "suppressGitVersionWarning": false,
+        "suppressLineUncommittedWarning": false,
+        "suppressNoRepositoryWarning": false,
+        "suppressUpdateNotice": true,
+        "suppressWelcomeNotice": false
+    },
+    "gitlens.keymap": "alternate"
 }
