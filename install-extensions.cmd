@@ -25,9 +25,11 @@ call code --install-extension luggage66.AWK
 call code --install-extension lukehoban.Go
 call code --install-extension nemesv.copy-file-name
 call code --install-extension pedroguerra.ant-tree-viewer
+call code --install-extension ryu1kn.partial-diff
 call code --install-extension ryu1kn.text-marker
 call code --install-extension slevesque.vscode-multiclip
 call code --install-extension steve8708.Align
+call code --install-extension vscodevim.vim
 call code --install-extension wmaurer.change-case
 call code --install-extension wmaurer.vscode-jumpy
 call code --install-extension xyz.plsql-language

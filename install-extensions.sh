@@ -1,3 +1,4 @@
+rm -rf ~/.vscode/extensions
 code --install-extension adamhartford.vscode-base64
 code --install-extension adelphes.google-search-ext
 code --install-extension alefragnani.Bookmarks
@@ -24,9 +25,11 @@ code --install-extension luggage66.AWK
 code --install-extension lukehoban.Go
 code --install-extension nemesv.copy-file-name
 code --install-extension pedroguerra.ant-tree-viewer
+code --install-extension ryu1kn.partial-diff
 code --install-extension ryu1kn.text-marker
 code --install-extension slevesque.vscode-multiclip
 code --install-extension steve8708.Align
+code --install-extension vscodevim.vim
 code --install-extension wmaurer.change-case
 code --install-extension wmaurer.vscode-jumpy
 code --install-extension xyz.plsql-language
