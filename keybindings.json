@@ -5,8 +5,11 @@
     "key": "shift+enter",
     "command": "extension.jumpy-word",
     "when": "editorTextFocus"
+  },
+  {
+    "command": "toggleVim",
+    "key": "ctrl+k ctrl+v"
   }
-
   //  {"key": "ctrl+shift+alt+l", "command": "bookmarks.toggle"},
 //  {
 //      "key": "j",
