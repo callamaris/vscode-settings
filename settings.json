@@ -1,11 +1,14 @@
 // Platzieren Sie Ihre Einstellungen in dieser Datei, um die Standardeinstellungen zu überschreiben.
 {
+
     //Workbench
-    "workbench.editor.showTabs": false,
+    "workbench.editor.showTabs": true,
     "workbench.editor.enablePreview": false, //nerviges automatisches Schließen von Dateien
     "workbench.iconTheme": "vscode-great-icons",
     "workbench.colorTheme": "Visual Studio Dark",
 
+    //textmarker
+    "textmarker.useHighlightColorOnRuler" : true,
 
     //Zen Mode
     "zenMode.fullScreen": true,
@@ -29,9 +32,6 @@
     //extensions
     "extensions.ignoreRecommendations": true,
 
-    //Bookmarks
-    "bookmarks.treeview.visible": false,
-
     //Window
     "window.openFilesInNewWindow": "off", //fürs Öffnen von csv Dateien aus Batch-Script
     "window.zoomLevel": 0,
@@ -43,12 +43,13 @@
     "editor.stablePeek": true,
     "editor.minimap.renderCharacters": true,
     "editor.minimap.showSlider": "always",
+    "editor.minimap.maxColumn": 80,
     "editor.wordWrap": "off",
     "editor.renderIndentGuides": true,
     "editor.cursorBlinking": "solid",
-    "editor.renderWhitespace": "all",
+    "editor.renderWhitespace": "none",
     "editor.renderControlCharacters": true,
-    "editor.lineNumbers": "relative",
+    //"editor.lineNumbers": "relative",
     "editor.autoClosingBrackets": false, //Geht das auch per File Extension?
     "editor.rulers": [
         40, 80, 100, 120
@@ -61,20 +62,16 @@
     //terminal
     "terminal.integrated.shell.windows": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
 
-    //csv
-    //"csv-preview.quoteMark": "",
-    "csv-preview.separator": ";",
-    "csv-preview.theme": "cleanlight",
-    "csv-preview.skipComments": true,
-    "csv-preview.commentCharacter": "#",
-    "csv-preview.capitalizeHeaders": false,
-
+    //indent  highlighter
+    "indentRainbow.ignoreErrorLanguages": [
+        "plaintext", "plsql"
+    ],
 
     //diff
     "diffEditor.renderSideBySide": true,
 
     //Explorer
-    "explorer.openEditors.visible": 0,
+    "explorer.openEditors.visible": 20,
 
     //Code Runner (TODO)
     "code-runner.fileDirectoryAsCwd": true,
@@ -127,7 +124,9 @@
     //Bookmarks
     "bookmarks.navigateThroughAllFiles": true,
     "bookmarks.saveBookmarksInProject": true,
+    "bookmarks.treeview.visible": false,
     "numberedBookmarks.saveBookmarksInProject": true,
+    "numberedBookmarks.navigateThroughAllFiles": "replace",
 
     //Find Related Files
     "findrelated.autoOpen": false, //???
@@ -177,94 +176,12 @@
     //vim
     "vim.disableExtension": true,
     "vim.useSystemClipboard": true,
+    "vim.easymotion": true,
     "vim.leader": "<space>",
-        "vim.otherModesKeyBindingsNonRecursive": [
-            //common
-            { "before": ["<leader>","<space>"], "commands": [ { "command": "workbench.action.showCommands" } ] },
-            { "before": ["<leader>", "<tab>"], "commands": [ { "command": "workbench.action.openNextRecentlyUsedEditorInGroup" } ] },
-            { "before": ["<leader>", ";", ";"], "commands": [ { "command": "editor.action.commentLine" } ] },
-            { "before": ["<leader>", "'"], "commands": [ { "command": "workbench.action.terminal.toggleTerminal" } ] },
-            { "before": [ "<leader>", "/" ], "commands": [ { "command": "workbench.action.findInFiles" } ] },
-            //split window number
-            { "before": [ "<leader>", "1" ], "commands": [ { "command": "workbench.action.focusFirstEditorGroup" } ] },
-            { "before": [ "<leader>", "2" ], "commands": [ { "command": "workbench.action.focusSecondEditorGroup" } ] },
-            { "before": [ "<leader>", "3" ], "commands": [ { "command": "workbench.action.focusThirdEditorGroup" } ] },
-            //buffers
-            { "before": [ "<leader>", "b", "b" ], "commands": [ { "command": "workbench.action.showAllEditors" } ] },
-            { "before": [ "<leader>", "b", "d" ], "commands": [ { "command": "workbench.action.closeActiveEditor" } ] },
-            { "before": [ "<leader>", "b", "n" ], "commands": [ { "command": "workbench.action.nextEditor" } ] },
-            { "before": [ "<leader>", "b", "p" ], "commands": [ { "command": "workbench.action.previousEditor" } ] },
-            { "before": [ "<leader>", "b", "s" ], "commands": [ { "command": "workbench.action.files.newUntitledFile" } ] },
-            //error log
-            { "before": [ "<leader>", "e", "l" ], "commands": [ { "command": "workbench.actions.view.problems" } ] },
-            //files
-            { "before": [ "<leader>", "f", "e" ], "commands": [ { "command": "workbench.action.openGlobalSettings" } ] },
-            { "before": [ "<leader>", "f", "f" ], "commands": [ { "command": "workbench.action.quickOpen" } ] },
-            { "before": [ "<leader>", "f", "r" ], "commands": [ { "command": "workbench.action.openRecent" } ] },
-            { "before": [ "<leader>", "f", "s" ], "commands": [ { "command": "workbench.action.files.save" } ] },
-            { "before": [ "<leader>", "f", "t" ], "commands": [ { "command": "workbench.view.explorer" } ] },
-            { "before": [ "<leader>", "f", "y" ], "commands": [ { "command": "workbench.action.files.copyPathOfActiveFile" } ] },
-            //git
-            { "before": [ "<leader>", "g", "b" ], "commands": [ { "command": "git.checkout" } ] },
-            { "before": [ "<leader>", "g", "c" ], "commands": [ { "command": "git.commit" } ] },
-            { "before": [ "<leader>", "g", "d" ], "commands": [ { "command": "git.deleteBranch" } ] },
-            { "before": [ "<leader>", "g", "f" ], "commands": [ { "command": "git.fetch" } ] },
-            { "before": [ "<leader>", "g", "i" ], "commands": [ { "command": "git.init" } ] },
-            { "before": [ "<leader>", "g", "m" ], "commands": [ { "command": "git.merge" } ] },
-            { "before": [ "<leader>", "g", "p" ], "commands": [ { "command": "git.publish" } ] },
-            { "before": [ "<leader>", "g", "s" ], "commands": [ { "command": "workbench.view.scm" } ] },
-            { "before": [ "<leader>", "g", "S" ], "commands": [ { "command": "git.stage" } ] },
-            { "before": [ "<leader>", "g", "U" ], "commands": [ { "command": "git.unstage" } ] },
-            //keybindings file
-            { "before": [ "<leader>", "h", "d" ], "commands": [ { "command": "workbench.action.openGlobalKeybindings" } ] },
-            //snippet
-            { "before": [ "<leader>", "i", "s" ], "commands": [ { "command": "editor.action.insertSnippet" } ] },
-            //format document
-            { "before": [ "<leader>", "j", "=" ], "commands": [ { "command": "editor.action.formatDocument" } ] },
-            //??????
-            { "before": [ "leader", "j", "j" ], "after": [ "leader", "leader", "s" ] },
-            { "before": [ "leader", "j", "l" ], "after": [ "leader", "leader", "leader", "b", "d", "j", "k" ] },
-            { "before": [ "leader", "j", "w" ], "after": [ "leader", "leader", "leader", "b", "d", "w" ] },
-            //close folder
-            { "before": [ "<leader>", "l", "d" ], "commands": [ { "command": "workbench.action.closeFolder" } ] },
-            //project
-            { "before": [ "<leader>", "p", "f" ], "commands": [ { "command": "workbench.action.quickOpen" } ] },
-            { "before": [ "<leader>", "p", "l" ], "commands": [ { "command": "workbench.action.files.openFolder" } ] },
-            { "before": [ "<leader>", "p", "p" ], "commands": [ { "command": "workbench.action.openRecent" } ] },
-            { "before": [ "<leader>", "p", "t" ], "commands": [ { "command": "workbench.view.explorer" } ] },
-            //quit
-            { "before": [ "<leader>", "q", "f" ], "commands": [ { "command": "workbench.action.closeWindow" } ] },
-            { "before": [ "<leader>", "q", "q" ], "commands": [ { "command": "workbench.action.closeWindow" } ] },
-            { "before": [ "<leader>", "q", "r" ], "commands": [ { "command": "workbench.action.reloadWindow" } ] },
-            //find in files
-            { "before": [ "<leader>", "r", "s" ], "commands": [ { "command": "workbench.action.findInFiles" } ] },
-            //symbol
-            { "before": [ "<leader>", "s", "e" ], "commands": [ { "command": "editor.action.rename" } ] },
-            { "before": [ "<leader>", "s", "j" ], "commands": [ { "command": "workbench.action.gotoSymbol" } ] },
-            { "before": [ "<leader>", "s", "p" ], "commands": [ { "command": "workbench.action.findInFiles" } ] },
-            { "before": [ "<leader>", "s", "P" ], "commands": [ { "command": "workbench.action.findInFilesWithSelectedText" } ] },
-            //Toggle
-            { "before": [ "<leader>", "T", "F" ], "commands": [ { "command": "workbench.action.toggleFullScreen" } ] },
-            { "before": [ "<leader>", "T", "m" ], "commands": [ { "command": "workbench.action.toggleMenuBar" } ] },
-            { "before": [ "<leader>", "T", "s" ], "commands": [ { "command": "workbench.action.selectTheme" } ] },
-            { "before": [ "<leader>", "T", "t" ], "commands": [ { "command": "workbench.action.toggleActivityBarVisibility" } ] },
-            //visual mode
-            { "before": [ "<leader>", "v" ], "commands": [ { "command": "editor.action.smartSelect.grow" } ] },
-            { "before": [ "<leader>", "V" ], "commands": [ { "command": "editor.action.smartSelect.shrink" } ] },
-            //window
-            { "before": [ "<leader>", "w", "d" ], "commands": [ { "command": "workbench.action.closeEditorsInGroup" } ] },
-            { "before": [ "<leader>", "w", "h" ], "commands": [ { "command": "workbench.action.focusPreviousGroup" } ] },
-            { "before": [ "<leader>", "w", "H" ], "commands": [ { "command": "workbench.action.moveActiveEditorGroupLeft" } ] },
-            { "before": [ "<leader>", "w", "l" ], "commands": [ { "command": "workbench.action.focusNextGroup" } ] },
-            { "before": [ "<leader>", "w", "L" ], "commands": [ { "command": "workbench.action.moveActiveEditorGroupRight" } ] },
-            { "before": [ "<leader>", "w", "m" ], "commands": [ { "command": "workbench.action.maximizeEditor" } ] },
-            { "before": [ "<leader>", "w", "v" ], "commands": [ { "command": "workbench.action.splitEditor" } ] },
-            { "before": [ "<leader>", "w", "w" ], "commands": [ { "command": "workbench.action.focusNextGroup" } ] },
-            { "before": [ "<leader>", "w", "W" ], "commands": [ { "command": "workbench.action.focusPreviousGroup" } ] },
-            //transform
-            { "before": [ "<leader>", "x", "s" ], "commands": [ { "command": "editor.action.sortLinesAscending" } ] },
-            { "before": [ "<leader>", "x", "w" ], "commands": [ { "command": "editor.action.trimTrailingWhitespace" } ] } ],
-        "vim.insertModeKeyBindings": [
-            { "before": [ "j", "j" ], "after": [ "<Esc>" ] } ],
-        "vim.easymotion": true
-    }
+    "vim.normalModeKeyBindingsNonRecursive": [
+        { "before": ["<leader>","<space>"], "commands": [ { "command": "workbench.action.showCommands" } ] },
+    ],
+    "vim.insertModeKeyBindings": [
+        { "before": [ "j", "j" ], "after": [ "<Esc>" ] }
+    ]
+}
