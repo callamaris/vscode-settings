@@ -17,8 +17,10 @@
 
     //Files
     "files.encoding": "windows1252",
+    "[java]": {
+        "files.encoding": "utf8"
+    },
     "files.trimTrailingWhitespace": true,
-    "files.autoGuessEncoding": true,
     "files.associations": {
         "*.sql": "plsql",
         "*.pkg": "plsql",
@@ -50,7 +52,8 @@
     "editor.renderWhitespace": "none",
     "editor.renderControlCharacters": true,
     //"editor.lineNumbers": "relative",
-    "editor.autoClosingBrackets": false, //Geht das auch per File Extension?
+    "editor.autoClosingQuotes": "never",
+    "editor.autoClosingBrackets": "never",
     "editor.rulers": [
         40, 80, 100, 120
     ],
@@ -125,8 +128,6 @@
     "bookmarks.navigateThroughAllFiles": true,
     "bookmarks.saveBookmarksInProject": true,
     "bookmarks.treeview.visible": false,
-    "numberedBookmarks.saveBookmarksInProject": true,
-    "numberedBookmarks.navigateThroughAllFiles": "replace",
 
     //Find Related Files
     "findrelated.autoOpen": false, //???
@@ -183,5 +184,7 @@
     ],
     "vim.insertModeKeyBindings": [
         { "before": [ "j", "j" ], "after": [ "<Esc>" ] }
-    ]
+    ],
+    "git.enableSmartCommit": true,
+    "breadcrumbs.enabled": true
 }
